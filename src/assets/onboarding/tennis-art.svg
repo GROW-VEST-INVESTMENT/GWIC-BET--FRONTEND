@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 480" fill="none">
+  <defs>
+    <linearGradient id="frame" x1="74" x2="277" y1="96" y2="346" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4FF9D"/>
+      <stop offset=".52" stop-color="#AFFF37"/>
+      <stop offset="1" stop-color="#48B847"/>
+    </linearGradient>
+    <filter id="glow" width="1.7" height="1.7" x="-.35" y="-.35">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <ellipse cx="188" cy="231" fill="#ACFF38" opacity=".35" rx="97" ry="131" filter="url(#glow)"/>
+  <g transform="rotate(32 184 208)">
+    <ellipse cx="184" cy="187" rx="86" ry="125" fill="#071729" fill-opacity=".72" stroke="url(#frame)" stroke-width="9"/>
+    <ellipse cx="184" cy="187" rx="68" ry="106" stroke="#DAFFAC" stroke-opacity=".7" stroke-width="3"/>
+    <path d="M124 108c38 49 67 104 89 165m-58-207c-5 63-4 129 7 197m-43-173c53 42 100 74 144 98m-172-64c57 16 112 22 168 17m-164 34c56-11 111-28 160-53m-143 113c34-43 69-85 112-124" stroke="#DDFEBC" stroke-opacity=".56" stroke-width="2.5"/>
+    <path d="m177 306 23 10 54 100-23 13-65-95 11-28Z" fill="#102B38" stroke="url(#frame)" stroke-linejoin="round" stroke-width="7"/>
+    <path d="m232 415 23-13 13 21-24 14-12-22Z" fill="#B5FF42"/>
+  </g>
+  <circle cx="280" cy="351" r="31" fill="#B8FF43"/>
+  <path d="M266 324c19 15 24 38 14 55m14-56c-19 15-24 38-14 55" stroke="#F0FFBA" stroke-width="4"/>
+</svg>

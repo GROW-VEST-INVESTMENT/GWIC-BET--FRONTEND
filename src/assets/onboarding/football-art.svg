@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 480" fill="none">
+  <defs>
+    <linearGradient id="ball" x1="106" x2="285" y1="167" y2="363" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D6FF78"/>
+      <stop offset=".48" stop-color="#A7F72F"/>
+      <stop offset="1" stop-color="#3C9C31"/>
+    </linearGradient>
+    <filter id="glow" width="1.6" height="1.6" x="-.3" y="-.3">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+  </defs>
+  <ellipse cx="198" cy="275" fill="#A8FF38" opacity=".36" rx="113" ry="115" filter="url(#glow)"/>
+  <g transform="rotate(-32 194 268)">
+    <path d="M194 155c67 0 121 51 121 113s-54 113-121 113S73 330 73 268s54-113 121-113Z" fill="#071729" stroke="url(#ball)" stroke-width="8"/>
+    <path d="M194 173c16 26 24 57 24 95s-8 69-24 95m0-190c-16 26-24 57-24 95s8 69 24 95m-99-95h198m-182-54h166m-166 108h166" stroke="#D7FF91" stroke-opacity=".88" stroke-width="5"/>
+    <path d="m178 242 16-11 16 11v19l-16 11-16-11v-19Zm-46-27 16-11 16 11v19l-16 11-16-11v-19Zm92 0 16-11 16 11v19l-16 11-16-11v-19Zm-46 81 16-11 16 11v19l-16 11-16-11v-19Zm-46 0 16-11 16 11v19l-16 11-16-11v-19Zm92 0 16-11 16 11v19l-16 11-16-11v-19Z" fill="#B5FF45" fill-opacity=".72"/>
+  </g>
+  <path d="M94 394c60 33 139 33 199-1" stroke="#C1FF50" stroke-linecap="round" stroke-opacity=".8" stroke-width="4"/>
+</svg>
