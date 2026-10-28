@@ -115,10 +115,6 @@ function OnboardingScreen({
           {isComplete ? 'Back to welcome' : 'Skip'}
         </button>
       </div>
-      <div
-        aria-hidden="true"
-        className="absolute bottom-[3.5vw] left-1/2 z-10 h-[0.85vw] w-[28.5vw] -translate-x-1/2 rounded-full bg-white"
-      />
     </main>
   )
 }
