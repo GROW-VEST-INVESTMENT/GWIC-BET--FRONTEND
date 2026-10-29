@@ -1,32 +1,9 @@
-import { CircleDot, Gamepad2, Gift, Spade } from 'lucide-react'
-
-const features = [
-  {
-    title: 'Sports Betting',
-    description: 'Football, Tennis,\nBasketball & more',
-    Icon: CircleDot,
-  },
-  {
-    title: 'Live Betting',
-    description: 'Real-time action,\nbigger wins',
-    Icon: Gamepad2,
-  },
-  {
-    title: 'Casino Games',
-    description: 'Slots, Blackjack,\nRoulette & more',
-    Icon: Spade,
-  },
-  {
-    title: 'Bonuses & Rewards',
-    description: 'More play,\nmore wins',
-    Icon: Gift,
-  },
-]
+import { onboardingFeatures } from '../../data/onboardingFeatures'
 
 function FeatureHighlights() {
   return (
     <ul className="grid grid-cols-4">
-      {features.map(({ title, description, Icon }, index) => (
+      {onboardingFeatures.map(({ title, description, Icon }, index) => (
         <li
           className={`flex min-w-0 flex-col items-center px-1 text-center ${
             index > 0 ? 'border-l border-white/15' : ''
