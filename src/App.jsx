@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
+import DashboardScreen from './components/dashboard/DashboardScreen'
 import OnboardingScreen from './components/onboarding/OnboardingScreen'
 import { onboardingSlides } from './data/onboardingSlides'
 import { checkApiHealth } from './lib/api'
 
 function App() {
   const [activeSlide, setActiveSlide] = useState(0)
-  const [isComplete, setIsComplete] = useState(false)
+  const [hasEnteredHome, setHasEnteredHome] = useState(false)
   const [apiStatus, setApiStatus] = useState('checking')
 
   useEffect(() => {
@@ -27,7 +28,7 @@ function App() {
 
   function continueOnboarding() {
     if (activeSlide === onboardingSlides.length - 1) {
-      setIsComplete(true)
+      setHasEnteredHome(true)
       return
     }
 
@@ -35,26 +36,22 @@ function App() {
   }
 
   function skipOnboarding() {
-    setIsComplete(true)
+    setHasEnteredHome(true)
   }
 
   function selectSlide(index) {
     setActiveSlide(index)
-    setIsComplete(false)
   }
 
-  function restartOnboarding() {
-    setActiveSlide(0)
-    setIsComplete(false)
+  if (hasEnteredHome) {
+    return <DashboardScreen />
   }
 
   return (
     <OnboardingScreen
       activeSlide={activeSlide}
       apiStatus={apiStatus}
-      isComplete={isComplete}
       onContinue={continueOnboarding}
-      onRestart={restartOnboarding}
       onSkip={skipOnboarding}
       onSelectSlide={selectSlide}
       slide={onboardingSlides[activeSlide]}
