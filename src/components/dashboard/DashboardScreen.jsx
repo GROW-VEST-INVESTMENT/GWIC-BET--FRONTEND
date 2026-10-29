@@ -410,15 +410,19 @@ function DashboardScreen() {
         <div className="mx-auto flex h-[78px] max-w-[1080px] items-center justify-between gap-4 px-4 sm:h-[90px] sm:px-7">
           <img
             alt="GWIC BET"
-            className="h-auto w-[clamp(136px,36vw,176px)] shrink-0"
+            className={`${searchOpen ? 'hidden sm:block' : ''} h-auto w-[clamp(136px,36vw,176px)] shrink-0`}
             src={brandLogo}
           />
-          <div className="flex items-center gap-1 sm:gap-2">
+          <div
+            className={`flex min-w-0 items-center gap-1 sm:gap-2 ${
+              searchOpen ? 'flex-1 sm:flex-none' : ''
+            }`}
+          >
             {searchOpen && (
               <input
                 autoFocus
                 aria-label="Search matches"
-                className="w-[min(42vw,260px)] rounded-xl border border-[#1b3d53] bg-[#071827] px-3 py-2 text-sm text-white outline-none placeholder:text-white/40 focus:border-[#b5ff36]/60"
+                className="min-w-0 flex-1 rounded-xl border border-[#1b3d53] bg-[#071827] px-3 py-2 text-base text-white outline-none placeholder:text-white/40 focus:border-[#b5ff36]/60 sm:w-[min(42vw,260px)] sm:flex-none"
                 onChange={(event) => setSearchQuery(event.target.value)}
                 placeholder="Search teams or leagues"
                 value={searchQuery}
